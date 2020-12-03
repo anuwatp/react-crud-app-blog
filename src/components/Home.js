@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading } from "./header/Heading";
+import { Heading } from "./Heading";
 import { BlogList } from "./BlogList";
 
 export const Home = () => {
