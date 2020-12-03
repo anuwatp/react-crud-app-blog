@@ -1,67 +1,100 @@
+@import "mixins";
+
 // Navbar
 .navbar {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
   background-color: $darker;
   margin: 0 auto;
+  align-items: center;
 }
 
-// Navbar brand/logo
-.navbar-brand {
-  color: $white;
-  text-decoration: none;
-  padding: 1rem;
-  font-size: 1.5rem;
-}
+// Navbar left content
+.navbar-left {
+  display: flex;
 
-// Form search in nav
-.navbar-search {
-  position: relative;
-  margin: auto 0;
-
-  input[type="search"] {
-    padding: 6px {
-      left: 50px;
-    }
-    border: 2px solid $darker;
-    border-radius: $border-radius;
-    width: 15rem;
-
-    &:focus {
-      border: 2px solid $blue;
-    }
+  .navbar-brand {
+    color: $white;
+    text-decoration: none;
+    padding: 1rem;
+    font-size: 1.5rem;
   }
 
-  button {
-    padding: 3.5px 10px;
-    background-color: $blue;
-    border: none;
-    border-radius: $border-radius;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    cursor: pointer;
-    position: absolute;
-    left: 0px;
-    top: 1px;
+  .navbar-search {
+    position: relative;
+    margin: auto 0;
 
-    svg {
-      fill: $white;
-      height: 1.2rem;
-      width: 1.2rem;
+    input[type="search"] {
+      padding: 6px {
+        left: 50px;
+      }
+      border: 2px solid $darker;
+      border-radius: $border-radius;
+      width: 15rem;
+
+      &:focus {
+        border: 2px solid $blue;
+      }
+    }
+
+    button {
+      padding: 3.5px 10px;
+      background-color: $blue;
+      border: none;
+      border-radius: 2px; //navbar sarch border-radius is 3px, this value make it look the same
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      cursor: pointer;
+      position: absolute;
+      left: 1.5px;
+      top: 1.2px;
+
+      svg {
+        fill: $white;
+        height: 1.2rem;
+        width: 1.2rem;
+      }
+    }
+  }
+}
+
+// Navbar right content
+.navbar-right {
+  display: flex;
+
+  .navbar-nav {
+    @include default-list(row);
+    text-transform: capitalize;
+    padding-bottom: 1rem;
+
+    li {
+      margin: 0 0.5rem;
+      a {
+        @include btn($white, $blue);
+        margin-top: 0;
+      }
     }
   }
 }
 
 // Media queries
 @media (min-width: 640px) {
-  .navbar-brand {
-    margin-left: 6rem;
-  }
-  .navbar-search {
-    margin-left: 1rem;
+  .navbar {
+    .navbar-left {
+      .navbar-search {
+        margin-left: 1rem;
 
-    input[type="search"] {
-      width: 24rem;
+        input[type="search"] {
+          width: 24rem;
+        }
+      }
+    }
+
+    .navbar-right {
+      .navbar-nav {
+        padding-bottom: 0rem;
+      }
     }
   }
 }

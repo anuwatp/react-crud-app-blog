@@ -7,7 +7,7 @@
   margin-bottom: 1rem;
 }
 
-// General config
+// General settings
 * {
   box-sizing: border-box;
   margin: 0;
@@ -50,7 +50,7 @@ a {
       display: block;
       width: 100%;
       margin-top: 6px;
-      border-bottom: 2px solid $lightGray;
+      border-bottom: 2px solid $gray;
     }
   }
 }
@@ -79,18 +79,17 @@ a {
 
       time {
         font-size: 0.8em;
-        color: $gray;
+        color: $lightGray;
       }
     }
 
     .article-content {
       a {
-        @include btn($blue);
+        @include btn($blue, $white);
         border-bottom: 1px solid $blue;
 
         &:hover {
           border-bottom: 1px solid $white;
-          color: $white;
         }
 
         svg {

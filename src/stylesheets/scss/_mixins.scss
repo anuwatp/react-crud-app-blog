@@ -1,5 +1,19 @@
-@mixin btn($color) {
+// Buttons
+@mixin btn($color, $hoverColor) {
   display: inline-block;
   margin-top: 1rem;
   color: $color;
+  &:hover {
+    color: $hoverColor;
+  }
+}
+
+// Lists
+// Remove default settings for UL/OL
+@mixin default-list($direction) {
+  display: flex;
+  flex-direction: $direction;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }

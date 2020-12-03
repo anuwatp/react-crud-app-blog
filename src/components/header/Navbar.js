@@ -1,20 +1,14 @@
-import React from "react";
-import { HiSearch } from "react-icons/hi";
+import React, { useRef } from "react";
+import { LeftNavbar } from "./LeftNavbar";
+import { RightNavbar } from "./RightNavbar";
 
 export const Navbar = () => {
   return (
     <header>
       <nav>
         <div className="navbar">
-          <a href="#" className="navbar-brand">
-            Blog
-          </a>
-          <form className="navbar-search" autoComplete="off">
-            <input type="search" placeholder="Search" aria-label="Search" />
-            <button type="submit">
-              <HiSearch />
-            </button>
-          </form>
+          <LeftNavbar />
+          <RightNavbar />
         </div>
       </nav>
     </header>
