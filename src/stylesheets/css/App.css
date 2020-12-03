@@ -1,0 +1,204 @@
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #14181d;
+  margin: 0 auto;
+}
+
+.navbar-brand {
+  color: #fff;
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.navbar-search {
+  position: relative;
+  margin: auto 0;
+}
+
+.navbar-search input[type="search"] {
+  padding: 6px;
+  padding-left: 50px;
+  border: 2px solid #14181d;
+  border-radius: 3px;
+  width: 15rem;
+}
+
+.navbar-search input[type="search"]:focus {
+  border: 2px solid #29a9f3;
+}
+
+.navbar-search button {
+  padding: 3.5px 10px;
+  background-color: #29a9f3;
+  border: none;
+  border-radius: 3px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  cursor: pointer;
+  position: absolute;
+  left: 0px;
+  top: 1px;
+}
+
+.navbar-search button svg {
+  fill: #fff;
+  height: 1.2rem;
+  width: 1.2rem;
+}
+
+@media (min-width: 640px) {
+  .navbar-brand {
+    margin-left: 6rem;
+  }
+  .navbar-search {
+    margin-left: 1rem;
+  }
+  .navbar-search input[type="search"] {
+    width: 24rem;
+  }
+}
+
+h1, .article-container .article-card .article-header {
+  margin-bottom: 1rem;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto Slab", sans-serif;
+  background-color: #1c2127;
+  color: #fff;
+  position: relative;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: start;
+  position: relative;
+}
+
+.container .home-header {
+  width: 100%;
+}
+
+.container .home-header::after {
+  content: "";
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  border-bottom: 2px solid #393344;
+}
+
+.article-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 6rem auto;
+}
+
+.article-container .article-card {
+  display: inline-block;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+.article-container .article-card .article-header a {
+  color: #fff;
+}
+
+.article-container .article-card .article-header a:hover {
+  color: #29a9f3;
+}
+
+.article-container .article-card .article-header time {
+  font-size: 0.8em;
+  color: #787a8a;
+}
+
+.article-container .article-card .article-content a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #29a9f3;
+  border-bottom: 1px solid #29a9f3;
+}
+
+.article-container .article-card .article-content a:hover {
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+
+.article-container .article-card .article-content a svg {
+  vertical-align: middle;
+  margin-left: 3px;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 4rem;
+  }
+  .container .home-header h1 {
+    font-size: 2rem;
+  }
+  .container .home-header p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+  .container .home-header {
+    width: 70%;
+  }
+  .article-container .article-card {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+/*# sourceMappingURL=App.css.map */

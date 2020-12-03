@@ -1,0 +1,148 @@
+@import "variables";
+@import "navbar";
+@import "mixins";
+
+// Extends/Inheritance
+%heading-space {
+  margin-bottom: 1rem;
+}
+
+// General config
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-stack;
+  background-color: $dark;
+  color: $white;
+  position: relative;
+  line-height: 1.5;
+}
+
+// Headings
+h1 {
+  @extend %heading-space;
+}
+
+// Links
+a {
+  text-decoration: none;
+}
+
+// Home container
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: start;
+  position: relative;
+
+  .home-header {
+    width: 100%;
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      margin-top: 6px;
+      border-bottom: 2px solid $lightGray;
+    }
+  }
+}
+
+// Article container
+.article-container {
+  display: flex;
+  flex-direction: column;
+  margin: 6rem auto;
+
+  .article-card {
+    display: inline-block;
+    margin: 0 auto {
+      bottom: 6rem;
+    }
+
+    .article-header {
+      @extend %heading-space;
+
+      a {
+        color: $white;
+        &:hover {
+          color: $blue;
+        }
+      }
+
+      time {
+        font-size: 0.8em;
+        color: $gray;
+      }
+    }
+
+    .article-content {
+      a {
+        @include btn($blue);
+        border-bottom: 1px solid $blue;
+
+        &:hover {
+          border-bottom: 1px solid $white;
+          color: $white;
+        }
+
+        svg {
+          vertical-align: middle;
+          margin-left: 3px;
+        }
+      }
+    }
+  }
+}
+
+// Media queries
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 4rem;
+
+    .home-header {
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+
+    .home-header {
+      width: $header-width;
+    }
+  }
+
+  .article-container {
+    .article-card {
+      width: $default-width;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}

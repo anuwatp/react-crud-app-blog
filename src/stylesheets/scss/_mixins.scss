@@ -1,0 +1,5 @@
+@mixin btn($color) {
+  display: inline-block;
+  margin-top: 1rem;
+  color: $color;
+}

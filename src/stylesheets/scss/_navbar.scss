@@ -1,0 +1,76 @@
+// Navbar
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $darker;
+  margin: 0 auto;
+}
+
+// Navbar brand/logo
+.navbar-brand {
+  color: $white;
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+// Form search in nav
+.navbar-search {
+  position: relative;
+  margin: auto 0;
+
+  input[type="search"] {
+    padding: 6px {
+      left: 50px;
+    }
+    border: 2px solid $darker;
+    border-radius: $border-radius;
+    width: 15rem;
+
+    &:focus {
+      border: 2px solid $blue;
+    }
+  }
+
+  button {
+    padding: 3.5px 10px;
+    background-color: $blue;
+    border: none;
+    border-radius: $border-radius;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    cursor: pointer;
+    position: absolute;
+    left: 0px;
+    top: 1px;
+
+    svg {
+      fill: $white;
+      height: 1.2rem;
+      width: 1.2rem;
+    }
+  }
+}
+
+// Media queries
+@media (min-width: 640px) {
+  .navbar-brand {
+    margin-left: 6rem;
+  }
+  .navbar-search {
+    margin-left: 1rem;
+
+    input[type="search"] {
+      width: 24rem;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1280px) {
+}
