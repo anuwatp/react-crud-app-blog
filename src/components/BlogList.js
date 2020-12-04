@@ -18,7 +18,7 @@ export const BlogList = () => {
             at earum molestiae iusto inventore nulla labore rem totam ducimus
             esse nam ipsum quis error. Dolor sed, consequuntur ipsum rem nostrum
             ex corporis deleniti saepe exercitationem odit, culpa obcaecati amet
-            vitae odio adipisci.
+            vitae odio adipisci...
           </p>
           <a className="btn" href="#">
             Read more
@@ -40,7 +40,7 @@ export const BlogList = () => {
             at earum molestiae iusto inventore nulla labore rem totam ducimus
             esse nam ipsum quis error. Dolor sed, consequuntur ipsum rem nostrum
             ex corporis deleniti saepe exercitationem odit, culpa obcaecati amet
-            vitae odio adipisci.
+            vitae odio adipisci...
           </p>
           <a className="btn" href="#">
             Read more
