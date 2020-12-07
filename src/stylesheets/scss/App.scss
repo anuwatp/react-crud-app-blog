@@ -1,6 +1,7 @@
 @import "variables";
 @import "navbar";
 @import "mixins";
+@import "blogForm";
 
 // Extends/Inheritance
 %heading-space {
@@ -62,9 +63,14 @@ a {
   display: flex;
   flex-direction: column;
   margin: 6rem auto;
+  max-width: 100%;
 
   .article-card {
     display: inline-block;
+    max-width: 100%;
+    min-width: 100%;
+    word-wrap: break-word;
+    overflow: hidden;
     margin: 0 auto {
       bottom: 6rem;
     }
@@ -87,7 +93,7 @@ a {
 
     .article-content {
       a {
-        @include btn($blue, $white);
+        @include btnLink($blue, $white);
         border-bottom: 1px solid $blue;
 
         &:hover {
@@ -117,11 +123,15 @@ a {
 
     .home-header {
       h1 {
-        font-size: 2rem;
+        font-size: 3rem;
       }
       p {
         font-size: 1.5rem;
       }
+    }
+
+    .article-header {
+      font-size: 1.5rem;
     }
   }
 }
@@ -137,7 +147,8 @@ a {
 
   .article-container {
     .article-card {
-      width: $default-width;
+      max-width: $default-width;
+      min-width: $default-width;
     }
   }
 }

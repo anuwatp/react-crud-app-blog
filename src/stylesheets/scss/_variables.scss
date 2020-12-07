@@ -9,14 +9,16 @@ $gray: #393344 !default;
 $dark: #1c2127 !default;
 $darker: #14181d !default;
 
+// Buttons
+$btnPrimary: #1d5bcf !default;
+$btnPrimaryHover: #1d3ecf !default;
+
 // Fonts
 $font-stack: "Roboto Slab", sans-serif;
-
-// Headings
 
 //Border-radius
 $border-radius: 3px;
 
 // Content width
-$default-width: 50%;
+$default-width: 65%;
 $header-width: 70%;

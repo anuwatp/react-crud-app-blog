@@ -1,52 +1,65 @@
-import React from "react";
+import React, { useContext } from "react";
 import { BsArrowRight } from "react-icons/bs";
+import styled from "styled-components";
+import { BsPencilSquare, BsTrash } from "react-icons/bs";
+import { Link } from "react-router-dom";
+import { GlobalContext } from "../context/GlobalState";
+
+const BtnEditDelete = styled.div`
+  cursor: pointer;
+  float: right;
+  font-size: 2rem;
+  line-height: 2;
+
+  .btnDelete {
+    margin-left: 1rem;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 1.5rem;
+  }
+`;
 
 export const BlogList = () => {
+  const { blogs, removeBlog } = useContext(GlobalContext);
+
   return (
     <section className="article-container">
-      <article className="article-card">
-        <header className="article-header">
-          <h2>
-            <a href="#">Blog 1</a>
-          </h2>
-          <time dateTime="2020-12-03">December 3, 2020</time>
-        </header>
-        <div className="article-content">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
-            laborum quia exercitationem placeat quod neque asperiores dolores,
-            at earum molestiae iusto inventore nulla labore rem totam ducimus
-            esse nam ipsum quis error. Dolor sed, consequuntur ipsum rem nostrum
-            ex corporis deleniti saepe exercitationem odit, culpa obcaecati amet
-            vitae odio adipisci...
-          </p>
-          <a className="btn" href="#">
-            Read more
-            <BsArrowRight />
-          </a>
-        </div>
-      </article>
-      <article className="article-card">
-        <header className="article-header">
-          <h2>
-            <a href="#">Blog 2</a>
-          </h2>
-          <time dateTime="2020-12-03">December 3, 2020</time>
-        </header>
-        <div className="article-content">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
-            laborum quia exercitationem placeat quod neque asperiores dolores,
-            at earum molestiae iusto inventore nulla labore rem totam ducimus
-            esse nam ipsum quis error. Dolor sed, consequuntur ipsum rem nostrum
-            ex corporis deleniti saepe exercitationem odit, culpa obcaecati amet
-            vitae odio adipisci...
-          </p>
-          <a className="btn" href="#">
-            Read more
-          </a>
-        </div>
-      </article>
+      {blogs.length > 0 ? (
+        <>
+          {blogs.map((blog) => (
+            <article className="article-card" key={blog.id}>
+              <header className="article-header">
+                <h2>
+                  <Link to="/">{blog.title}</Link>
+                  <BtnEditDelete>
+                    <Link to={`/edit/${blog.id}`} className="btnEdit">
+                      <BsPencilSquare />
+                    </Link>
+                    <Link
+                      to="/"
+                      className="btnDelete"
+                      onClick={() => removeBlog(blog.id)}
+                    >
+                      <BsTrash />
+                    </Link>
+                  </BtnEditDelete>
+                </h2>
+                <time dateTime="2020-12-03">{blog.created}</time>
+              </header>
+              <div className="article-content">
+                <p>{blog.content}</p>
+                <Link to="/" className="btn">
+                  Read more
+                  <BsArrowRight />
+                </Link>
+              </div>
+            </article>
+          ))}
+        </>
+      ) : (
+        <h2 style={{ fontSize: "3rem" }}>No blogs</h2>
+      )}
     </section>
   );
 };

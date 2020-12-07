@@ -1,7 +1,8 @@
-import React, { useRef } from "react";
+import React from "react";
 import { HeaderSearch } from "./HeaderSearch";
 import { Burger } from "./Burger";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Nav = styled.nav`
   display: flex;
@@ -44,9 +45,9 @@ export const Navbar = () => {
       {/* <nav className="navbar"> */}
       <Nav>
         <div className="navbar-container">
-          <a href="#" className="navbar-logo">
+          <Link to="/" className="navbar-logo">
             Blog
-          </a>
+          </Link>
           <HeaderSearch />
           <Burger />
         </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Ul = styled.ul`
   list-style: none;
@@ -19,6 +20,15 @@ const Ul = styled.ul`
   a {
     &:hover {
       color: #29a9f3;
+    }
+  }
+
+  .navbar-new_blog {
+    a {
+      color: #2191f1;
+      &:hover {
+        color: #fff;
+      }
     }
   }
 
@@ -48,6 +58,9 @@ const Ul = styled.ul`
       a {
         display: block;
         margin-top: 1.5rem;
+        &::before {
+          content: "+ ";
+        }
       }
       &::before {
         content: "";
@@ -64,10 +77,14 @@ export const RightNavbar = ({ open }) => {
     <>
       <div className="navbar-right">
         <Ul open={open}>
-          <li>Home</li>
-          <li>Categories</li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/">Categories</Link>
+          </li>
           <li className="navbar-new_blog">
-            <a href="#">New blog</a>
+            <Link to="/new">New blog</Link>
           </li>
         </Ul>
       </div>

@@ -1,0 +1,59 @@
+.blog_form {
+  width: 100%;
+
+  .form-group {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-bottom: 1.5rem;
+
+    label {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    input,
+    textarea {
+      font-family: "Roboto Slab", sans-serif;
+      border-radius: $border-radius;
+      border: none;
+      padding: 1rem;
+      font-size: 1.5rem;
+    }
+  }
+  .btn-form_group {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    button,
+    a {
+      width: 48.4%;
+    }
+
+    button {
+      @include btn($white, $btnPrimary, $btnPrimaryHover);
+    }
+
+    a {
+      text-align: center;
+      @include btn($dark, #ccdfee, #b2c2ce);
+    }
+  }
+}
+
+// Media queries
+@media (min-width: 640px) {
+  .blog_form {
+    width: 60%;
+  }
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1280px) {
+}

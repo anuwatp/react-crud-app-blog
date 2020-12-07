@@ -1,5 +1,5 @@
 // Buttons
-@mixin btn($color, $hoverColor) {
+@mixin btnLink($color, $hoverColor) {
   display: inline-block;
   margin-top: 1rem;
   color: $color;
@@ -16,4 +16,20 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+// Buttons
+@mixin btn($color, $bgColor, $hoverBgColor) {
+  cursor: pointer;
+  border: none;
+  display: inline-block;
+  padding: 15px 32px;
+  font-size: 1rem;
+  border-radius: $border-radius;
+  background-color: $bgColor;
+  color: $color;
+
+  &:hover {
+    background-color: $hoverBgColor;
+  }
 }
