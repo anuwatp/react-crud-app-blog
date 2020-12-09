@@ -167,6 +167,15 @@ a {
   text-decoration: none;
 }
 
+.disabled {
+  color: gray !important;
+  cursor: not-allowed;
+}
+
+.disabled:hover {
+  color: gray !important;
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -239,15 +248,10 @@ a {
   display: inline-block;
   margin-top: 1rem;
   color: #29a9f3;
-  border-bottom: 1px solid #29a9f3;
 }
 
 .article-container .article-card .article-content a:hover {
   color: #fff;
-}
-
-.article-container .article-card .article-content a:hover {
-  border-bottom: 1px solid #fff;
 }
 
 .article-container .article-card .article-content a svg {
@@ -284,9 +288,9 @@ a {
   .container .home-header {
     width: 70%;
   }
-  .article-container .article-card {
-    max-width: 65%;
-    min-width: 65%;
+  .article-container {
+    max-width: 70%;
+    min-width: 70%;
   }
 }
 

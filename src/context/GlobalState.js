@@ -7,7 +7,7 @@ const initialState = {
       id: 1,
       title: "Blog 1",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, laborum quia exercitationem placeat quod neque asperiores dolores, at earum molestiae iusto inventore nulla labore rem totam ducimus esse nam ipsum quis error. Dolor sed, consequuntur ipsum rem nostrum ex corporis deleniti saepe exercitationem odit, culpa obcaecati amet vitae odio adipisci...",
+        "Folly words widow one downs few age every seven. If miss part by fact he park just shew. Discovered had get considered projection who favourable. Necessary up knowledge it tolerably. Unwilling departure education is be dashwoods or an. Use off agreeable law unwilling sir deficient curiosity instantly. Easy mind life fact with see has bore ten. Parish any chatty can elinor direct for former. Up as meant widow equal an share least...",
       created: "December 3, 2020",
     },
     {

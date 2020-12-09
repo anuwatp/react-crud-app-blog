@@ -81,7 +81,9 @@ export const RightNavbar = ({ open }) => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/">Categories</Link>
+            <Link className="disabled" to="/">
+              Categories
+            </Link>
           </li>
           <li className="navbar-new_blog">
             <Link to="/new">New blog</Link>

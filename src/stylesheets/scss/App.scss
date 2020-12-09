@@ -33,6 +33,15 @@ a {
   text-decoration: none;
 }
 
+// Disabled
+.disabled {
+  color: gray !important;
+  cursor: not-allowed;
+  &:hover {
+    color: gray !important;
+  }
+}
+
 // Home container
 .container {
   display: flex;
@@ -94,11 +103,6 @@ a {
     .article-content {
       a {
         @include btnLink($blue, $white);
-        border-bottom: 1px solid $blue;
-
-        &:hover {
-          border-bottom: 1px solid $white;
-        }
 
         svg {
           vertical-align: middle;
@@ -141,15 +145,13 @@ a {
     max-width: 1024px;
 
     .home-header {
-      width: $header-width;
+      width: $default-width;
     }
   }
 
   .article-container {
-    .article-card {
-      max-width: $default-width;
-      min-width: $default-width;
-    }
+    max-width: $default-width;
+    min-width: $default-width;
   }
 }
 

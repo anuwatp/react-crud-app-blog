@@ -50,7 +50,11 @@ export const HeaderSearch = () => {
   return (
     <NavbarSearch>
       <form>
-        <input type="search" placeholder="Search" aria-label="Search" />
+        <input
+          type="search"
+          placeholder="Search blogs here"
+          aria-label="Search blogs here"
+        />
         <button type="submit">
           <HiSearch />
         </button>

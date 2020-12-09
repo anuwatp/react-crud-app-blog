@@ -5,6 +5,7 @@ import { AddBlog } from "./components/routes/AddBlog";
 import { EditBlog } from "./components/routes/EditBlog";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { GlobalProvider } from "./context/GlobalState";
+import { Blog } from "./components/routes/Blog";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Switch>
           <Route path="/new" component={AddBlog} exact />
           <Route path="/edit/:id" component={EditBlog} exact />
+          <Route path="/blog/:id" component={Blog} exact />
           <Route path="/" component={Home} exact />
         </Switch>
       </GlobalProvider>

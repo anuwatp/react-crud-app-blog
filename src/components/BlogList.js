@@ -31,7 +31,7 @@ export const BlogList = () => {
             <article className="article-card" key={blog.id}>
               <header className="article-header">
                 <h2>
-                  <Link to="/">{blog.title}</Link>
+                  <Link to={`/blog/${blog.id}`}>{blog.title}</Link>
                   <BtnEditDelete>
                     <Link to={`/edit/${blog.id}`} className="btnEdit">
                       <BsPencilSquare />
@@ -49,7 +49,7 @@ export const BlogList = () => {
               </header>
               <div className="article-content">
                 <p>{blog.content}</p>
-                <Link to="/" className="btn">
+                <Link to={`/blog/${blog.id}`} className="btn">
                   Read more
                   <BsArrowRight />
                 </Link>
@@ -58,7 +58,7 @@ export const BlogList = () => {
           ))}
         </>
       ) : (
-        <h2 style={{ fontSize: "3rem" }}>No blogs</h2>
+        <h2 style={{ fontSize: "2rem", textAlign: "center" }}>No post found</h2>
       )}
     </section>
   );

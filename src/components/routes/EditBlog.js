@@ -18,6 +18,8 @@ export const EditBlog = (route) => {
     const blogId = currentBlogId;
     const selectedBlog = blogs.find((blog) => blog.id === parseInt(blogId));
     setSelectedBlog(selectedBlog);
+    // Cleaning up the old values
+    return () => {};
   }, [blogs, currentBlogId]);
 
   const onSubmit = (e) => {
@@ -30,7 +32,7 @@ export const EditBlog = (route) => {
     setSelectedBlog({ ...selectedBlog, [blogKey]: value });
 
   if (!selectedBlog || !selectedBlog.id) {
-    return <div>Something went wrong? Hmm..</div>;
+    return <div></div>;
   }
 
   return (
@@ -39,6 +41,7 @@ export const EditBlog = (route) => {
         <div className="form-group">
           <label htmlFor="title">Edit blog title</label>
           <input
+            required
             name="title"
             type="text"
             value={selectedBlog.title}
@@ -48,6 +51,7 @@ export const EditBlog = (route) => {
         <div className="form-group">
           <label htmlFor="content">Edit blog content</label>
           <textarea
+            required
             name="content"
             id=""
             cols="30"

@@ -26,6 +26,7 @@ export const AddBlog = () => {
         <div className="form-group">
           <label htmlFor="title">New blog title</label>
           <input
+            required
             name="title"
             type="text"
             value={title}
@@ -35,6 +36,7 @@ export const AddBlog = () => {
         <div className="form-group">
           <label htmlFor="content">Blog content</label>
           <textarea
+            required
             name="content"
             id=""
             cols="30"
